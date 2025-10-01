@@ -4,37 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maison 888 – Residencial Boutique Vertical</title>
-
+  
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  
   <meta name="description" content="Maison 888: um residencial boutique vertical em Santa Mônica, Feira de Santana. Plantas generosas, lazer sofisticado e endereço icônico." />
+  <meta property="og:title" content="Maison 888 – Residencial Boutique Vertical" />
+  <meta property="og:description" content="A tradição renasce em sofisticação. Um residencial boutique em Feira de Santana com plantas generosas e lazer exclusivo." />
+  <meta property="og:image" content="https://www.maison888.com.br/assets/img/social-preview.jpg" />
+  <meta property="og:url" content="https://www.maison888.com.br" />
+  <meta property="og:type" content="website" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
     body { font-family: 'Lato', sans-serif; background:#F5F6F8; color:#111; }
     .serif { font-family: 'Playfair Display', serif; }
-
-    /* ESTILOS PARA AS ABAS DO MODAL */
-    .tab-button {
-      padding: 8px 16px;
-      cursor: pointer;
-      border-radius: 8px;
-      background-color: transparent;
-      border: 1px solid #C9A14C;
-      color: #C9A14C;
-      transition: all 0.2s;
-    }
-    .tab-button.active {
-      background-color: #C9A14C;
-      color: #0F1A28;
-      font-weight: bold;
-    }
-    .pdf-iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    .tab-button { padding: 8px 16px; cursor: pointer; border-radius: 8px; background-color: transparent; border: 1px solid #C9A14C; color: #C9A14C; transition: all 0.2s; }
+    .tab-button.active { background-color: #C9A14C; color: #0F1A28; font-weight: bold; }
+    .pdf-iframe { width: 100%; height: 100%; border: none; }
   </style>
 </head>
 <body class="antialiased">
@@ -46,6 +36,7 @@
       </a>
       <div class="hidden md:flex gap-8 text-[#F5F6F8]">
         <a href="#conceito" class="hover:text-[#C9A14C]">Conceito</a>
+        <a href="#video" class="hover:text-[#C9A14C]">Vídeo</a>
         <a href="#galeria" class="hover:text-[#C9A14C]">Galeria</a>
         <a href="#plantas" class="hover:text-[#C9A14C]">Plantas</a>
         <a href="#lazer" class="hover:text-[#C9A14C]">Lazer</a>
@@ -56,270 +47,190 @@
          class="hidden md:inline-flex items-center gap-2 bg-[#C9A14C] text-[#0F1A28] px-5 py-2 rounded-full font-semibold shadow-gold hover:opacity-90">
         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
       </a>
+      <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F1A28] absolute top-full left-0 w-full">
+        <a href="#conceito" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Conceito</a>
+        <a href="#video" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Vídeo</a>
+        <a href="#galeria" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Galeria</a>
+        <a href="#plantas" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Plantas</a>
+        <a href="#lazer" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Lazer</a>
+        <a href="#localizacao" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Localização</a>
+        <a href="#contato" class="block text-center text-white py-3 hover:bg-[#C9A14C] hover:text-[#0F1A28]">Contato</a>
+    </div>
   </header>
 
-  <section class="hero h-[90vh] flex items-center justify-center text-center text-white">
-    <div class="px-6">
-      <h1 class="serif text-5xl md:text-7xl font-extrabold drop-shadow">A tradição renasce em sofisticação</h1>
-      <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-white/90">No endereço histórico da Mansão 888, nasce um residencial boutique vertical com plantas generosas, lazer exclusivo e acabamentos atemporais.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contato" class="bg-[#C9A14C] text-[#0F1A28] px-8 py-4 rounded-full font-bold hover:opacity-90">Quero conhecer</a>
-        <a href="#plantas" class="border border-[#C9A14C] px-8 py-4 rounded-full font-bold hover:bg-[#C9A14C] hover:text-[#0F1A28]">Ver plantas</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="conceito" class="py-24 bg-white">
-    <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="serif text-4xl md:text-5xl text-[#0F1A28]">Residencial Boutique <span class="text-[#C9A14C]">Vertical</span></h2>
-        
-        <p class="mt-6 text-lg text-[#333]">O Maison 888 redefine a experiência de viver em Feira de Santana, trazendo para Santa Mônica um empreendimento singular, inspirado na lendária Mansão 888, palco de grandes encontros e festas memoráveis da cidade. São 2 torres independentes com 62 metros de altura, fachadas modernas e atemporais, todos os cômodos varandados e um conceito arquitetônico que alia sofisticação, ventilação cruzada e iluminação natural.</p>
-        <p class="mt-4 text-lg text-[#333]">Um dos grandes diferenciais é que o primeiro pavimento residencial já se encontra na altura equivalente ao 6º andar, garantindo vistas privilegiadas, mais privacidade e a sensação permanente de viver em um nível superior.</p>
-        <p class="mt-4 text-lg text-[#333]">Os apartamentos variam de 182 a 486 m², com tipologias de 3 e 4 suítes por andar e coberturas exclusivas de até 5 suítes (486,43 m²), as primeiras de alto padrão em Feira de Santana. Todas as unidades possuem varandas generosas, integração entre sala, cozinha e varanda, hall privativo com elevador social exclusivo, depósito individual e vagas proporcionais ao número de suítes.</p>
-        <p class="mt-4 text-lg text-[#333]">No PUC – Pavimento de Uso Comum, o lazer é pensado no conceito boutique, reunindo o máximo em exclusividade:</p>
-        <ul class="mt-4 text-lg text-[#333] list-disc pl-6 space-y-2">
-            <li>Piscina, solarium e hidro</li>
-            <li>Sauna, massagem e lounge</li>
-            <li>Academia completa, coworking e mercado</li>
-            <li>Espaço gourmet, bar, grill e salão de festas</li>
-            <li>Quadras (beach tennis e poliesportiva)</li>
-            <li>Espaço infantil, playground e pet park</li>
-        </ul>
-        <p class="mt-4 text-lg text-[#333]">Além disso, o projeto entrega paisagismo autoral, ambientes prontos com revestimentos e metais de alto padrão, infraestrutura para energia solar, pontos de recarga para carros elétricos e sistemas de automação e segurança de última geração.</p>
-        
-        <p class="mt-4 font-semibold text-[#0F1A28]">Condições de lançamento: <span class="text-[#C9A14C]">entrada facilitada</span>.</p>
-      </div>
-      <div class="bg-[#0F1A28] text-[#F5F6F8] rounded-2xl p-8">
-        <div class="grid grid-cols-3 gap-6 text-center">
-          <div><div class="serif text-4xl text-[#C9A14C]">2</div><div>Torres</div></div>
-          <div><div class="serif text-4xl text-[#C9A14C]">72</div><div>Unidades</div></div>
-          <div><div class="serif text-4xl text-[#C9A14C]">182–486</div><div>m²</div></div>
-          <div><div class="serif text-4xl text-[#C9A14C]">3–5</div><div>Suítes</div></div>
-          <div><div class="serif text-4xl text-[#C9A14C]">3–5</div><div>Vagas</div></div>
-          <div><div class="serif text-2xl text-[#C9A14C]"><i class="fa-solid fa-crown"></i></div><div>Exclusivo</div></div>
+  <main>
+    <section class="hero h-[90vh] flex items-center justify-center text-center text-white">
+      <div class="px-6">
+        <h1 class="serif text-5xl md:text-7xl font-extrabold drop-shadow">A tradição renasce em sofisticação</h1>
+        <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-white/90">No endereço histórico da Mansão 888, nasce um residencial boutique vertical com plantas generosas, lazer exclusivo e acabamentos atemporais.</p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contato" class="bg-[#C9A14C] text-[#0F1A28] px-8 py-4 rounded-full font-bold hover:opacity-90">Quero conhecer</a>
+          <a href="#plantas" class="border border-[#C9A14C] px-8 py-4 rounded-full font-bold hover:bg-[#C9A14C] hover:text-[#0F1A28]">Ver plantas</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="galeria" class="py-24 bg-[#0F1A28] text-[#F5F6F8]">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="serif text-4xl md:text-5xl text-center">Galeria Premium</h2>
-      <p class="text-center mt-3 text-white/80">Clique para ampliar</p>
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-01.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-01.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-02.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-02.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-03.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-03.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-04.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-04.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-05.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-05.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-06.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-06.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-07.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-07.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-08.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-08.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-09.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-09.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-10.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-10.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-11.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-11.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-12.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-12.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-13.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-13.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-14.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-14.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-15.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-15.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-16.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-16.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-17.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-17.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-18.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-18.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-19.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-19.jpg" />
-        </figure>
-        <figure class="cursor-zoom-in group overflow-hidden rounded-2xl bg-[#111]/5 hover:bg-[#111]/10 transition-all">
-          <img src="assets/img/galeria-20.jpg" alt="Imagem Maison 888" loading="lazy" class="thumb w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" data-image-src="assets/img/galeria-20.jpg" />
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="plantas" class="py-24 bg-[#F5F6F8]">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="serif text-4xl md:text-5xl text-[#0F1A28] text-center">Plantas – Visualização</h2>
-      <p class="text-center mt-3 text-[#333]">Clique para visualizar em tela cheia</p>
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
-          <h4 class="text-2xl font-serif text-[#0F1A28]">Apartamento Tipo 3 e 4 (Torre II)</h4>
-          <p class="text-sm mt-1 text-[#555]">Visualização </p>
-          <button data-pdf-src="assets/pdf/apt-3-e-4.pdf" data-pdf-title="Apartamento Tipo 3 e 4 (Torre II)" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">
-            Visualizar em tela cheia
-          </button>
+    <section id="conceito" class="py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="serif text-4xl md:text-5xl text-[#0F1A28]">Residencial Boutique <span class="text-[#C9A14C]">Vertical</span></h2>
+          <p class="mt-6 text-lg text-[#333]">O Maison 888 redefine a experiência de viver em Feira de Santana, trazendo para Santa Mônica um empreendimento singular, inspirado na lendária Mansão 888, palco de grandes encontros e festas memoráveis da cidade. São 2 torres independentes com 62 metros de altura, fachadas modernas e atemporais, todos os cômodos varandados e um conceito arquitetônico que alia sofisticação, ventilação cruzada e iluminação natural.</p>
+          <p class="mt-4 text-lg text-[#333]">Um dos grandes diferenciais é que o primeiro pavimento residencial já se encontra na altura equivalente ao 6º andar, garantindo vistas privilegiadas, mais privacidade e a sensação permanente de viver em um nível superior.</p>
+          <p class="mt-4 text-lg text-[#333]">Os apartamentos variam de 182 a 486 m², com tipologias de 3 e 4 suítes por andar e coberturas exclusivas de até 5 suítes (486,43 m²), as primeiras de alto padrão em Feira de Santana. Todas as unidades possuem varandas generosas, integração entre sala, cozinha e varanda, hall privativo com elevador social exclusivo, depósito individual e vagas proporcionais ao número de suítes.</p>
+          <p class="mt-4 text-lg text-[#333]">No PUC – Pavimento de Uso Comum, o lazer é pensado no conceito boutique, reunindo o máximo em exclusividade:</p>
+          <ul class="mt-4 text-lg text-[#333] list-disc pl-6 space-y-2">
+              <li>Piscina, solarium e hidro</li>
+              <li>Sauna, massagem e lounge</li>
+              <li>Academia completa, coworking e mercado</li>
+              <li>Espaço gourmet, bar, grill e salão de festas</li>
+              <li>Quadras (beach tennis e poliesportiva)</li>
+              <li>Espaço infantil, playground e pet park</li>
+          </ul>
+          <p class="mt-4 text-lg text-[#333]">Além disso, o projeto entrega paisagismo autoral, ambientes prontos com revestimentos e metais de alto padrão, infraestrutura para energia solar, pontos de recarga para carros elétricos e sistemas de automação e segurança de última geração.</p>
+          <p class="mt-4 font-semibold text-[#0F1A28]">Condições de lançamento: <span class="text-[#C9A14C]">entrada facilitada</span>.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
-          <h4 class="text-2xl font-serif text-[#0F1A28]">Pavimento Tipo – Torre II</h4>
-          <p class="text-sm mt-1 text-[#555]">Visualização </p>
-          <button data-pdf-src="assets/pdf/pav-tipo-t2.pdf" data-pdf-title="Pavimento Tipo – Torre II" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">
-            Visualizar em tela cheia
-          </button>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
-          <h4 class="text-2xl font-serif text-[#0F1A28]">PUC – 5º Pavimento</h4>
-          <p class="text-sm mt-1 text-[#555]">Visualização </p>
-          <button data-pdf-src="assets/pdf/puc.pdf" data-pdf-title="PUC – 5º Pavimento" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">
-            Visualizar em tela cheia
-          </button>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
-          <h4 class="text-2xl font-serif text-[#0F1A28]">Cobertura Duplex</h4>
-          <p class="text-sm mt-1 text-[#555]">Pavimentos inferior e superior</p>
-          <button id="btn-visualizar-cobertura" data-pdf-inferior="assets/pdf/duplex-inferior.pdf" data-pdf-superior="assets/pdf/duplex-superior.pdf" data-pdf-title="Cobertura Duplex" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">
-            Visualizar Pavimentos
-          </button>
+        <div class="bg-[#0F1A28] text-[#F5F6F8] rounded-2xl p-8">
+          <div class="grid grid-cols-3 gap-6 text-center">
+            <div><div class="serif text-4xl text-[#C9A14C]">2</div><div>Torres</div></div>
+            <div><div class="serif text-4xl text-[#C9A14C]">72</div><div>Unidades</div></div>
+            <div><div class="serif text-4xl text-[#C9A14C]">182–486</div><div>m²</div></div>
+            <div><div class="serif text-4xl text-[#C9A14C]">3–5</div><div>Suítes</div></div>
+            <div><div class="serif text-4xl text-[#C9A14C]">3–5</div><div>Vagas</div></div>
+            <div><div class="serif text-2xl text-[#C9A14C]"><i class="fa-solid fa-crown"></i></div><div>Exclusivo</div></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="lazer" class="py-24 bg-white">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="serif text-4xl md:text-5xl text-[#0F1A28] text-center">Lazer Boutique</h2>
-      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🏊</div><div class="mt-2 font-semibold">Piscina & Spa</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🧖</div><div class="mt-2 font-semibold">Sauna & Massagem</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🏋️</div><div class="mt-2 font-semibold">Academia</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🎾</div><div class="mt-2 font-semibold">TÊNIS e Multiuso</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🛒</div><div class="mt-2 font-semibold">Mini-Mercado</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🍖</div><div class="mt-2 font-semibold">Grill & Gourmet</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">👶</div><div class="mt-2 font-semibold">Espaço Infantil</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🐶</div><div class="mt-2 font-semibold">Pet Park & Playground</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">💼</div><div class="mt-2 font-semibold">Coworking & Lounge</div></div>
-        <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🍸</div><div class="mt-2 font-semibold">Bar & Solarium</div></div>
+    <section id="video" class="py-24 bg-white">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+        <h2 class="serif text-4xl md:text-5xl text-[#0F1A28]">Vídeo de Apresentação</h2>
+        <p class="text-center mt-3 text-gray-600">Conheça cada detalhe do Maison 888.</p>
+        <div class="mt-12 relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+          <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+            <span class="text-gray-500">Cole o código do seu vídeo do YouTube/Vimeo aqui</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="galeria-externa" class="py-24 bg-[#0F1A28] text-white">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="serif text-4xl md:text-5xl text-center">Galeria Externa</h2>
-      <p class="text-center mt-3 text-white/80">Clique para ampliar</p>
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_21.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_21.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_22.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_22.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_23.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_23.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_25.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_25.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_26.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_26.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_27.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_27.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_29.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_29.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_32.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_32.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_33.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_33.jpeg" class="absolute inset-0"></button>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl shadow-lg">
-          <img src="assets/img/external/img_34.jpeg" alt="Fachada" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300"/>
-          <figcaption class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></figcaption>
-          <button data-image-src="assets/img/external/img_34.jpeg" class="absolute inset-0"></button>
-        </figure>
+    <section id="galeria" class="py-24 bg-[#0F1A28] text-[#F5F6F8]">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="serif text-4xl md:text-5xl text-center">Galeria Premium</h2>
+        <p class="text-center mt-3 text-white/80">Clique para ampliar</p>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="assets/img/galeria-01.jpg" class="glightbox" data-gallery="gallery-premium" description="Piscina com deck de madeira"><img src="assets/img/galeria-01.jpg" alt="Piscina com deck de madeira e vista para o jardim do Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-02.jpg" class="glightbox" data-gallery="gallery-premium" description="Salão de festas decorado"><img src="assets/img/galeria-02.jpg" alt="Salão de festas amplo e decorado com mesas e cadeiras no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-03.jpg" class="glightbox" data-gallery="gallery-premium" description="Espaço gourmet com churrasqueira"><img src="assets/img/galeria-03.jpg" alt="Espaço gourmet moderno com churrasqueira e bancada no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-04.jpg" class="glightbox" data-gallery="gallery-premium" description="Academia equipada"><img src="assets/img/galeria-04.jpg" alt="Academia com equipamentos de musculação e esteiras no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-05.jpg" class="glightbox" data-gallery="gallery-premium" description="Quadra de beach tennis"><img src="assets/img/galeria-05.jpg" alt="Quadra de areia para beach tennis no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-06.jpg" class="glightbox" data-gallery="gallery-premium" description="Playground infantil"><img src="assets/img/galeria-06.jpg" alt="Playground infantil com brinquedos coloridos e piso emborrachado" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-07.jpg" class="glightbox" data-gallery="gallery-premium" description="Lounge e área de convivência"><img src="assets/img/galeria-07.jpg" alt="Lounge externo com sofás e poltronas confortáveis no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-08.jpg" class="glightbox" data-gallery="gallery-premium" description="Pet park"><img src="assets/img/galeria-08.jpg" alt="Área verde cercada para pets no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+          <a href="assets/img/galeria-09.jpg" class="glightbox" data-gallery="gallery-premium" description="Sala de massagem"><img src="assets/img/galeria-09.jpg" alt="Sala de massagem relaxante e bem decorada no Maison 888" loading="lazy" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105" /></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="localizacao" class="py-24 bg-[#0F1A28] text-[#F5F6F8]">
-    <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="serif text-4xl md:text-5xl">Localização Privilegiada</h2>
-        <p class="mt-4 text-white/90">R. Rio Amazonas, 888 – Santa Mônica, Feira de Santana – BA, 44077-272.</p>
-        <a class="inline-flex mt-6 items-center gap-2 bg-[#C9A14C] text-[#0F1A28] px-5 py-3 rounded-full font-semibold hover:opacity-90" target="_blank" href="https://www.google.com/maps/search/R.+Rio+Amazonas,+888+–+Santa+Mônica,+Feira+de+Santana+–+BA,+44077-272">
-          <i class="fa-solid fa-map-location-dot"></i> Abrir no Google Maps
-        </a>
+    <section id="plantas" class="py-24 bg-[#F5F6F8]">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="serif text-4xl md:text-5xl text-[#0F1A28] text-center">Plantas – Visualização</h2>
+        <p class="text-center mt-3 text-[#333]">Clique para visualizar em tela cheia</p>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
+            <h4 class="text-2xl font-serif text-[#0F1A28]">Apartamento Tipo 3 e 4 (Torre II)</h4>
+            <p class="text-sm mt-1 text-[#555]">Visualização</p>
+            <button data-pdf-src="assets/pdf/apt-3-e-4.pdf" data-pdf-title="Apartamento Tipo 3 e 4 (Torre II)" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">Visualizar em tela cheia</button>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
+            <h4 class="text-2xl font-serif text-[#0F1A28]">Pavimento Tipo – Torre II</h4>
+            <p class="text-sm mt-1 text-[#555]">Visualização</p>
+            <button data-pdf-src="assets/pdf/pav-tipo-t2.pdf" data-pdf-title="Pavimento Tipo – Torre II" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">Visualizar em tela cheia</button>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
+            <h4 class="text-2xl font-serif text-[#0F1A28]">PUC – 5º Pavimento</h4>
+            <p class="text-sm mt-1 text-[#555]">Visualização</p>
+            <button data-pdf-src="assets/pdf/puc.pdf" data-pdf-title="PUC – 5º Pavimento" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">Visualizar em tela cheia</button>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-[#000]/5">
+            <h4 class="text-2xl font-serif text-[#0F1A28]">Cobertura Duplex</h4>
+            <p class="text-sm mt-1 text-[#555]">Planta unificada</p>
+            <button data-pdf-src="assets/pdf/cobertura-duplex.pdf" data-pdf-title="Cobertura Duplex" class="btn-visualizar-planta mt-4 w-full bg-[#C9A14C] text-[#0F1A28] font-bold py-3 rounded-xl hover:opacity-90 transition">Visualizar Planta</button>
+          </div>
+        </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-gold">
-        <iframe src="https://www.google.com/maps?q=R.%20Rio%20Amazonas%2C%201004%20-%20Santa%20M%C3%B4nica%2C%20Feira%20de%20Santana%20-%20BA%2C%2044077-272&output=embed" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contato" class="py-24 bg-white">
-    <div class="mx-auto max-w-3xl px-6">
-      <h2 class="serif text-4xl md:text-5xl text-center text-[#0F1A28]">Fale Conosco</h2>
-      <p class="text-center mt-2 text-[#333]">Almeida Lessa Engenharia LTDA • CNPJ 34.553.936/0001-61</p>
-      <form id="leadForm" class="mt-10 grid grid-cols-1 gap-4">
-        <input class="border rounded-xl px-4 py-3" name="name" placeholder="Nome completo" required />
-        <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="Seu melhor e-mail" required />
-        <input class="border rounded-xl px-4 py-3" name="phone" placeholder="WhatsApp com DDD" required />
-        <textarea class="border rounded-xl px-4 py-3" name="message" rows="4" placeholder="Mensagem (opcional)"></textarea>
-        <button class="bg-[#C9A14C] text-[#0F1A28] font-bold px-6 py-4 rounded-xl hover:opacity-90">Enviar por WhatsApp</button>
-      </form>
-      <div class="text-center mt-6">
-        <a href="https://wa.me/5571991168766?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Maison%20888." target="_blank" class="inline-flex items-center gap-2 text-[#0F1A28] font-semibold underline hover:text-[#C9A14C]">
-           <i class="fab fa-whatsapp"></i> Conversar agora via WhatsApp
-        </a>
+    <section id="lazer" class="py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-6">
+          <h2 class="serif text-4xl md:text-5xl text-[#0F1A28] text-center">Lazer Boutique</h2>
+          <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🏊</div><div class="mt-2 font-semibold">Piscina & Spa</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🧖</div><div class="mt-2 font-semibold">Sauna & Massagem</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🏋️</div><div class="mt-2 font-semibold">Academia</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🎾</div><div class="mt-2 font-semibold">TÊNIS e Multiuso</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🛒</div><div class="mt-2 font-semibold">Mini-Mercado</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🍖</div><div class="mt-2 font-semibold">Grill & Gourmet</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">👶</div><div class="mt-2 font-semibold">Espaço Infantil</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🐶</div><div class="mt-2 font-semibold">Pet Park & Playground</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">💼</div><div class="mt-2 font-semibold">Coworking & Lounge</div></div>
+            <div class="p-6 rounded-xl bg-[#F5F6F8]"><div class="text-3xl text-[#C9A14C]">🍸</div><div class="mt-2 font-semibold">Bar & Solarium</div></div>
+          </div>
+        </div>
+    </section>
+
+    <section id="galeria-externa" class="py-24 bg-[#0F1A28] text-white">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="serif text-4xl md:text-5xl text-center">Galeria Externa</h2>
+        <p class="text-center mt-3 text-white/80">Clique para ampliar</p>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="assets/img/external/img_21.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_21.jpeg" alt="Perspectiva da fachada do Maison 888 vista de baixo" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_22.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_22.jpeg" alt="Detalhe da varanda e arquitetura da fachada do Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_23.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_23.jpeg" alt="Vista noturna da fachada iluminada do Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_25.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_25.jpeg" alt="Visão ampla da torre do Maison 888 contra o céu" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_26.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_26.jpeg" alt="Entrada do empreendimento Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_27.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_27.jpeg" alt="Perspectiva lateral da arquitetura moderna do Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_29.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_29.jpeg" alt="Visão em ângulo do topo do edifício Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_32.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_32.jpeg" alt="Fachada do Maison 888 com detalhe do paisagismo na base" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_33.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_33.jpeg" alt="Vista da torre do Maison 888 a partir da rua" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+          <a href="assets/img/external/img_34.jpeg" class="glightbox" data-gallery="gallery-externa"><img src="assets/img/external/img_34.jpeg" alt="Detalhe dos andares superiores da fachada do Maison 888" class="w-full h-64 object-cover rounded-2xl transition-transform duration-300 hover:scale-105"/></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="localizacao" class="py-24 bg-[#0F1A28] text-[#F5F6F8]">
+      <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="serif text-4xl md:text-5xl">Localização Privilegiada</h2>
+          <p class="mt-4 text-white/90">R. Rio Amazonas, 888 – Santa Mônica, Feira de Santana – BA, 44077-272.</p>
+          <a class="inline-flex mt-6 items-center gap-2 bg-[#C9A14C] text-[#0F1A28] px-5 py-3 rounded-full font-semibold hover:opacity-90" target="_blank" href="https://www.google.com/maps/search/?api=1&query=R.+Rio+Amazonas,+888+-+Santa+M%C3%B4nica,+Feira+de+Santana+-+BA,+44077-272">
+            <i class="fa-solid fa-map-location-dot"></i> Abrir no Google Maps
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-gold">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.464030612954!2d-38.9419683!3d-12.2520637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439d0de03d5c7%3A0x9598f41851e3962d!2sR.+Rio+Amazonas%2C+888+-+Santa+M%C3%B4nica%2C+Feira+de+Santana+-+BA%2C+44077-272!5e0!3m2!1spt-BR!2sbr!4v1696196628888!5m2!1spt-BR!2sbr" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-white">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="serif text-4xl md:text-5xl text-center text-[#0F1A28]">Fale Conosco</h2>
+        <p class="text-center mt-2 text-[#333]">Almeida Lessa Engenharia LTDA • CNPJ 34.553.936/0001-61</p>
+        <form action="https://formspree.io/f/SEU_ID_UNICO" method="POST" class="mt-10 grid grid-cols-1 gap-4">
+          <input class="border rounded-xl px-4 py-3" name="name" placeholder="Nome completo" required />
+          <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="Seu melhor e-mail" required />
+          <input class="border rounded-xl px-4 py-3" name="phone" placeholder="WhatsApp com DDD" required />
+          <textarea class="border rounded-xl px-4 py-3" name="message" rows="4" placeholder="Mensagem (opcional)"></textarea>
+          <button type="submit" class="bg-[#C9A14C] text-[#0F1A28] font-bold px-6 py-4 rounded-xl hover:opacity-90">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="bg-[#0F1A28] text-[#F5F6F8] py-10">
     <div class="mx-auto max-w-7xl px-6 text-center">
@@ -343,65 +254,48 @@
       <div id="mediaContent" class="pt-4 flex-grow"></div>
     </div>
   </div>
-
-  <script src="assets/js/main.js"></script>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Lógica do Menu Mobile
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Lógica do Modal de Plantas (VERSÃO CORRIGIDA E ESTÁVEL)
       const mediaModal = document.getElementById('mediaModal');
       const mediaTitle = document.getElementById('mediaTitle');
       const mediaContent = document.getElementById('mediaContent');
       const modalClose = document.getElementById('modalClose');
       const modalOverlay = document.getElementById('modalOverlay');
       const plantButtons = document.querySelectorAll('.btn-visualizar-planta');
-
       const openModal = () => mediaModal.classList.remove('hidden');
       const closeModal = () => mediaModal.classList.add('hidden');
-
+      
       plantButtons.forEach(button => {
         button.addEventListener('click', function() {
           const title = this.getAttribute('data-pdf-title');
-          mediaTitle.textContent = title;
-          mediaContent.innerHTML = '';
-
-          if (this.hasAttribute('data-pdf-inferior')) {
-            const pdfInferior = this.getAttribute('data-pdf-inferior');
-            const pdfSuperior = this.getAttribute('data-pdf-superior');
-
-            mediaContent.innerHTML = `
-              <div class="flex gap-2 mb-4">
-                <button class="tab-button active" data-target="iframe-inferior">Pav. Inferior</button>
-                <button class="tab-button" data-target="iframe-superior">Pav. Superior</button>
-              </div>
-              <div class="w-full h-[calc(100%-50px)] relative">
-                <iframe id="iframe-inferior" class="pdf-iframe" src="${pdfInferior}"></iframe>
-                <iframe id="iframe-superior" class="pdf-iframe hidden" src="${pdfSuperior}"></iframe>
-              </div>
-            `;
-
-            const tabButtons = mediaContent.querySelectorAll('.tab-button');
-            tabButtons.forEach(tab => {
-              tab.addEventListener('click', function() {
-                mediaContent.querySelector('.tab-button.active').classList.remove('active');
-                mediaContent.querySelector('.pdf-iframe:not(.hidden)').classList.add('hidden');
-                
-                this.classList.add('active');
-                const targetIframeId = this.getAttribute('data-target');
-                document.getElementById(targetIframeId).classList.remove('hidden');
-              });
-            });
-
-          } else {
-            const pdfSrc = this.getAttribute('data-pdf-src');
-            mediaContent.innerHTML = `<iframe class="pdf-iframe" src="${pdfSrc}"></iframe>`;
-          }
+          const pdfSrc = this.getAttribute('data-pdf-src');
           
-          openModal();
+          if (pdfSrc) {
+              mediaTitle.textContent = title;
+              mediaContent.innerHTML = `<iframe class="pdf-iframe" src="${pdfSrc}"></iframe>`;
+              openModal();
+          }
         });
       });
-
+      
       modalClose.addEventListener('click', closeModal);
       modalOverlay.addEventListener('click', closeModal);
+
+      // Lógica da Galeria Lightbox
+      const lightbox = GLightbox({
+        loop: true,
+        touchNavigation: true,
+      });
     });
   </script>
 </body>
