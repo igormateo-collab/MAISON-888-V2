@@ -29,10 +29,9 @@
 </head>
 <body class="antialiased">
   <header id="siteHeader" class="fixed top-0 left-0 right-0 z-50 header-glass">
-    <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+    <nav class="mx-auto max-w-7xl px-6 py-0 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 text-2xl font-bold text-white serif">
-        <img src="assets/img/LOGO_sem_fundo.png" alt="Logotipo Maison 888" class="h-28 w-auto">
-        <span><span class="text-[#C9A14C]">Maison</span> 888</span>
+        <img src="assets/img/LOGO_sem_fundo.png" alt="Logotipo Maison 888" class="h-[250px] w-auto -my-0">
       </a>
       <div class="hidden md:flex gap-8 text-[#F5F6F8]">
         <a href="#conceito" class="hover:text-[#C9A14C]">Conceito</a>
@@ -65,7 +64,7 @@
   <main>
     <section class="hero h-[90vh] flex items-center justify-center text-center text-white">
       <div class="px-6">
-        <h1 class="serif text-5xl md:text-7xl font-extrabold drop-shadow">A tradição renasce em sofisticação</h1>
+        <h1 class="serif text-5xl md:text-7xl font-extrabold drop-shadow mt-24">A tradição renasce em sofisticação</h1>
         <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-white/90">No endereço histórico da Mansão 888, nasce um residencial boutique vertical com plantas generosas, lazer exclusivo e acabamentos atemporais.</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#contato" class="bg-[#C9A14C] text-[#0F1A28] px-8 py-4 rounded-full font-bold hover:opacity-90">Quero conhecer</a>
@@ -207,12 +206,12 @@
         <div>
           <h2 class="serif text-4xl md:text-5xl">Localização Privilegiada</h2>
           <p class="mt-4 text-white/90">R. Rio Amazonas, 888 – Santa Mônica, Feira de Santana – BA, 44077-272.</p>
-          <a class="inline-flex mt-6 items-center gap-2 bg-[#C9A14C] text-[#0F1A28] px-5 py-3 rounded-full font-semibold hover:opacity-90" target="_blank" href="https://www.google.com/maps/search/?api=1&query=R.+Rio+Amazonas,+888+-+Santa+M%C3%B4nica,+Feira+de+Santana+-+BA,+44077-272">
+          <a class="inline-flex mt-6 items-center gap-2 bg-[#C9A14C] text-[#0F1A28] px-5 py-3 rounded-full font-semibold hover:opacity-90" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+Amazonas,+888+-+Santa+M%C3%B4nica,+Feira+de+Santana+-+BA,+44077-272">
             <i class="fa-solid fa-map-location-dot"></i> Abrir no Google Maps
           </a>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-gold">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.464030612954!2d-38.9419683!3d-12.2520637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439d0de03d5c7%3A0x9598f41851e3962d!2sR.+Rio+Amazonas%2C+888+-+Santa+M%C3%B4nica%2C+Feira+de+Santana+-+BA%2C+44077-272!5e0!3m2!1spt-BR!2sbr!4v1696196628888!5m2!1spt-BR!2sbr" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.674997089955!2d-38.9482833!3d-12.2405787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7143831d5555555%3A0x8678f1385f091c13!2sR.+Rio+Amazonas%2C+888+-+Santa+M%C3%B4nica%2C+Feira+de+Santana+-+BA%2C+44077-272!5e0!3m2!1spt-BR!2sbr!4v1696197312345" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -235,8 +234,8 @@
   <footer class="bg-[#0F1A28] text-[#F5F6F8] py-10">
     <div class="mx-auto max-w-7xl px-6 text-center">
       <div class="flex justify-center items-center gap-4">
-        <img src="assets/img/LOGO_sem_fundo.png" alt="Logotipo Maison 888" class="h-28 w-auto">
-        <p class="serif text-2xl"><span class="text-[#C9A14C]">Maison</span> 888</p>
+        <img src="assets/img/LOGO_sem_fundo.png" alt="Logotipo Maison 888" class="h-30 w-auto">
+        <p class="serif text-2xl"><span class="text-[#C9A14C]"></span></p>
       </div>
       <p class="text-sm mt-2 opacity-80">Santa Mônica – Feira de Santana – BA</p>
       <p class="text-xs mt-6 opacity-60">Em atenção à Lei 4.591/64, as imagens são ilustrativas e estão sujeitas ao memorial descritivo.</p>
@@ -265,7 +264,7 @@
         mobileMenu.classList.toggle('hidden');
       });
 
-      // Lógica do Modal de Plantas (VERSÃO CORRIGIDA E ESTÁVEL)
+      // Lógica do Modal de Plantas
       const mediaModal = document.getElementById('mediaModal');
       const mediaTitle = document.getElementById('mediaTitle');
       const mediaContent = document.getElementById('mediaContent');
